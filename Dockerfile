@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 archlinux:latest as build
 
-ARG TARGET = arch-arm
+ARG TARGET=arch-arm
 
 RUN mkdir $TARGET
 
