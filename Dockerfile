@@ -21,9 +21,7 @@ RUN pacman --noconfirm -Sy base
 
 FROM scratch 
 
-ARG TARGET
-
-COPY --from=build ${TARGET}/ /
+COPY --from=build arch-arm/ /
 
 # To use this image as source start with the following command
 #
@@ -35,3 +33,14 @@ COPY --from=build ${TARGET}/ /
 # RUN pacman-key --init \
 #	&& pacman-key --populate archlinuxarm \
 #   && pacman -Sy
+
+
+
+
+
+
+
+
+
+
+
