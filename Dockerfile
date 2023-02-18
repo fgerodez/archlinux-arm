@@ -7,7 +7,7 @@ RUN mkdir $TARGET
 RUN echo 'Server = http://mirror.archlinuxarm.org/$arch/$repo' > /etc/pacman.d/mirrorlist \
 	&& sed -i "s/#RootDir     = \//RootDir = \/${TARGET}/" /etc/pacman.conf \
 	&& sed -i "s/Architecture = auto/Architecture = aarch64/" /etc/pacman.conf \
-    && mkdir -p /arch-pi/var/lib/pacman
+    && mkdir -p /${TARGET}/var/lib/pacman
 
 ADD install-arm-package.sh .
 
