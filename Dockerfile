@@ -17,7 +17,7 @@ RUN pacman-key --init \
 	&& pacman-key --populate archlinuxarm
 
 # Install ARM base
-RUN pacman --noconfirm -Sy base
+RUN pacman --noconfirm -Sy base archlinuxarm-keyring
 
 FROM scratch 
 
