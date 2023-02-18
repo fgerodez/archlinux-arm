@@ -16,11 +16,8 @@ RUN pacman-key --init \
 	&& ./install-arm-package.sh -p archlinuxarm-keyring / \
 	&& pacman-key --populate archlinuxarm
 
-# Bootstrap arm pacman & filesystem
-RUN pacman --noconfirm -Sy \
-	    pacman \
-	    archlinuxarm-keyring \
-	    filesystem
+# Install ARM base
+RUN pacman --noconfirm -Sy base
 
 FROM scratch 
 
